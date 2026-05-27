@@ -1,0 +1,42 @@
+#!/bin/bash
+# RIS-LLM training script
+
+python main.py \
+    --task_name long_term_forecast \
+    --is_training 1 \
+    --model_id RISLLM_EPF \
+    --model RISLLM \
+    --data EPF \
+    --root_path ./dataset \
+    --data_path spain_epf.csv \
+    --features M \
+    --target OT \
+    --freq h \
+    --seq_len 96 \
+    --label_len 48 \
+    --pred_len 24 \
+    --enc_in 13 \
+    --dec_in 13 \
+    --c_out 1 \
+    --d_model 16 \
+    --n_heads 8 \
+    --d_ff 32 \
+    --dropout 0.1 \
+    --batch_size 8 \
+    --train_epochs 10 \
+    --patience 10 \
+    --learning_rate 0.0001 \
+    --llm_model LLAMA \
+    --llm_dim 4096 \
+    --llm_layers 6 \
+    --patch_len 16 \
+    --stride 8 \
+    --rfe_h0 0.3 \
+    --rfe_k 2.0 \
+    --rfe_window 10 \
+    --granger_gamma 0.05 \
+    --n_clusters 5 \
+    --n_prototypes 1000 \
+    --proto_top_k 5 \
+    --use_amp \
+    --load_in_4bit

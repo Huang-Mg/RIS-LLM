@@ -1,0 +1,1 @@
+Hourly electricity price data from Spain. It includes timestamps in UTC, weather information like temperature, cloud and key market indicators such as fossil and renewable electricity generation, electricity load, day ahead price, and actual price. This archive contains 43824 measurements between January 2021 to December 2025.
